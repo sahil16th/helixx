@@ -1044,3 +1044,116 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICES */
+
+.services{
+text-align: center;
+height: 800px;
+background-color: #ffffff;
+padding: 70px;
+}
+
+
+.servicebox{
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicebox div{
+  height: 450px;
+  width: 340px;
+  background-color: #efefef;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#494949);
+  z-index: 1;
+  padding: 10px;
+
+}
+
+.servicebox div img{
+  border-radius: 20px;
+  width: 330px;
+  height: 440px;
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.servicebox div p{
+  display: none;
+  z-index: 10;
+  transition: .5s ease;
+}
+
+.servicebox div h3{
+  z-index: 10;
+  transition: .5s ease;
+  background-color: rgba(239, 239, 239, 0.8);
+
+}
+
+.servicebox div:hover img {
+  opacity: 0.8;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.servicebox div:hover #headyy{
+ opacity: 0;
+ display: none;
+ cursor: pointer;
+}
+
+/* .servicebox div:hover {
+  display:block;
+  
+ } */
+
+
+.servicebox div:hover p{
+ display: block;
+ cursor: pointer;
+  
+ }
+
+
+ .servicebox div:hover img{
+  opacity: 0;
+ }
+
+.servicebox div img {
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
