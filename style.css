@@ -47,6 +47,67 @@ body {
 
 
 
+
+.scrolltab{
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
+}
+
+.scrolltab a{
+  text-decoration: 0;
+  font-size: 19px;
+  font-weight: 500;
+  /* background-color: #999; */
+  border-radius: 20px;
+  padding: 12px;
+  color: rgb(0, 0, 0);
+  z-index: 10;
+}
+
+
+
+.contentscroll{
+  height: 700px;
+  width: 100%;
+}
+
+
+
+
+
+.scrolltab a:hover{
+  /* border: solid 2px black; */
+  color: rgb(109, 109, 109);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btnss{
   height: 100px;
   width: 500px;
@@ -54,7 +115,7 @@ body {
   align-items: center;
   justify-content: space-between;
   /* position: absolute; */
-  margin-left: 200px;
+  margin-left: 120px;
  
 }
 
@@ -988,8 +1049,7 @@ body {
 
 
 .firstpg {
-  height: 1000px;
-  background: linear-gradient(180deg, #ffffff 0%, #efefef 100%);
+  height: 850px;
   width: 100%;
   /* display: flex; */
   align-items: center;
@@ -1003,7 +1063,7 @@ body {
 
 
 .txtt {
-  margin-left: 200px;
+  margin-left: 120px;
   width: 900px;
   position: relative;
   z-index: 10;
@@ -1030,6 +1090,8 @@ body {
   z-index: 1;
   top: 0;
   opacity: .7;
+  
+  
 }
 
 
