@@ -49,14 +49,16 @@ body {
 
 
 .scrolltab{
-  height: 70px;
+  height: 150px;
   width: 100%;
   background-color: #ffffff;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(180deg, #ffffff 0%, #000000 100%);
+  background: linear-gradient(180deg, transparent 0%, #b9b9b9 100%);
+  position: absolute;
+  bottom: 0;
+  
 }
 
 .scrolltab a{
@@ -67,8 +69,24 @@ body {
   border-radius: 20px;
   padding: 12px;
   color: rgb(0, 0, 0);
-  z-index: 10;
+  z-index: 20;
+  text-decoration: none;
+  transition: color 0.5s ease;
+   
+   
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1054,6 +1072,9 @@ body {
   /* display: flex; */
   align-items: center;
   padding-top: 350px;
+  position: relative;
+ 
+  
 
 }
 
@@ -1065,12 +1086,42 @@ body {
 .txtt {
   margin-left: 120px;
   width: 900px;
-  position: relative;
-  z-index: 10;
-  /* margin-top: */
-
-
 }
+
+
+
+
+
+
+#elem2, #elem3, #elem4{
+  display: none;
+}
+
+#elem2, #elem3, #elem4 h1{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* #canvas {
@@ -1087,9 +1138,11 @@ body {
   
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: -10;
   top: 0;
   opacity: .7;
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+  height: 850px;
   
   
 }

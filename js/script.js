@@ -139,3 +139,153 @@ document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
     e.preventDefault();
     document.querySelector('.subscription').classList.add('done');
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   image change
+
+
+
+
+
+
+
+// const bgVideo = document.getElementById('bgvideo');
+// const images = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg'];
+// let currentIndex = 0;
+
+// function changeImage(index) {
+//   bgVideo.style.opacity = 0; // Fade out the current image
+//   setTimeout(() => {
+//     bgVideo.src = images[index];
+//     bgVideo.style.opacity = 1; // Fade in the new image
+//     currentIndex = index;
+
+//     // Update active anchor tag and its text color
+//     document.querySelectorAll('.scrolltab a').forEach((link, i) => {
+//       if (i === index) {
+//         link.classList.add('active');
+//         link.style.color = 'blue'; // Change the color to red (or any other color)
+//       } else {
+//         link.classList.remove('active');
+//         link.style.color = ''; // Reset the color to default
+//       }
+//     });
+//   }, 500); // Adjust the timing to match the transition duration
+// }
+
+// // Change image every 5 seconds
+// const intervalId = setInterval(() => {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   changeImage(currentIndex);
+// }, 5000);
+
+// // Initial image change
+// changeImage(currentIndex);
+
+// // Function to handle anchor tag clicks
+// function handleLinkClick(event, index) {
+//   event.preventDefault(); // Prevent default anchor tag behavior (e.g., scrolling to top of page)
+//   clearInterval(intervalId); // Stop automatic image change
+//   changeImage(index); // Change to the selected image
+// }
+
+// // Attach event listeners to anchor tags
+// for (let i = 0; i < images.length; i++) {
+//   document.getElementById('link' + (i + 1)).addEventListener('click', (event) => handleLinkClick(event, i));
+// }
+
+
+
+
+const bgVideo = document.getElementById('bgvideo');
+const images = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg'];
+let currentIndex = 0;
+
+function changeImage(index) {
+  bgVideo.style.opacity = 0; // Fade out the current image
+  setTimeout(() => {
+    bgVideo.src = images[index];
+    bgVideo.style.opacity = 1; // Fade in the new image
+    currentIndex = index;
+
+    // Update active anchor tag and its text color
+    document.querySelectorAll('.scrolltab a').forEach((link, i) => {
+      if (i === index) {
+        link.classList.add('active');
+        link.style.color = '#007bff'; // Change the color to red (or any other color)
+        // Display elem2 div when the anchor tag corresponding to image 2 is active
+
+
+        if (index === 0) {
+            document.getElementById('txttttt').style.display = 'block';
+            document.getElementById('btnss').style.display = 'flex';
+            document.getElementById('elem2').style.display = 'none';
+            document.getElementById('elem3').style.display = 'none';
+            document.getElementById('elem4').style.display = 'none';
+          } else if (index === 1) {
+            document.getElementById('txttttt').style.display = 'none';
+            document.getElementById('btnss').style.display = 'none';
+            document.getElementById('elem2').style.display = 'block';
+            document.getElementById('elem3').style.display = 'none';
+            document.getElementById('elem4').style.display = 'none';
+          } else if (index === 2) {
+            document.getElementById('txttttt').style.display = 'none';
+            document.getElementById('btnss').style.display = 'none';
+            document.getElementById('elem2').style.display = 'none';
+            document.getElementById('elem3').style.display = 'block';
+            document.getElementById('elem4').style.display = 'none';
+          } else if (index === 3) {
+            document.getElementById('txttttt').style.display = 'none';
+            document.getElementById('btnss').style.display = 'none';
+            document.getElementById('elem2').style.display = 'none';
+            document.getElementById('elem3').style.display = 'none';
+            document.getElementById('elem4').style.display = 'block';
+          }
+
+        
+
+        
+      } else {
+        link.classList.remove('active');
+        link.style.color = ''; // Reset the color to default
+      }
+    });
+  }, 500); // Adjust the timing to match the transition duration
+}
+
+// Change image every 5 seconds
+const intervalId = setInterval(() => {
+  currentIndex = (currentIndex + 1) % images.length;
+  changeImage(currentIndex);
+}, 5000);
+
+// Initial image change
+changeImage(currentIndex);
+
+// Function to handle anchor tag clicks
+function handleLinkClick(event, index) {
+  event.preventDefault(); // Prevent default anchor tag behavior (e.g., scrolling to top of page)
+  clearInterval(intervalId); // Stop automatic image change
+  document.querySelectorAll('.scrolltab a').forEach(link => {
+    link.classList.remove('active'); // Remove 'active' class from all anchor tags
+    link.style.color = ''; // Reset the color to default
+  });
+  changeImage(index); // Change to the selected image
+}
+
+// Attach event listeners to anchor tags
+for (let i = 0; i < images.length; i++) {
+  document.getElementById('link' + (i + 1)).addEventListener('click', (event) => handleLinkClick(event, i));
+}
